@@ -1,0 +1,43 @@
+{
+  "users": [
+      {
+          "id": 1,
+          "name": "Mateo Rios Diaz",
+          "email": null,
+          "pass": "***"
+      },
+      {
+          "id": 1,
+          "name": "Alejandro García",
+          "email": null,
+          "pass": "***"
+      }
+  ],
+  "todos": [
+      {
+          "id": 1,
+          "userId": 1,
+          "text": "Configurar prettier"
+      },
+      {
+          "id": 2,
+          "userId": 1,
+          "text": "Configurar eslint - linter"
+      },
+      {
+          "id": 3,
+          "userId": 1,
+          "text": "Configurar tailwind css"
+      },
+      {
+          "id": 4,
+          "userId": 2,
+          "text": "Configurar json/server"
+      },
+      {
+          "id": 5,
+          "userId": 2,
+          "text": "Crear data para json/server"
+      }
+  ]
+}
