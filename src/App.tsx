@@ -1,8 +1,8 @@
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Todo list</h1>
+    <div>
+      <header>
+        <h1>Welcome, todo list app.</h1>
       </header>
     </div>
   );
