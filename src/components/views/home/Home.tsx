@@ -1,3 +1,4 @@
+import { Link } from 'wouter'
 import HomeImage from '../../../assets/illustrations/human-men3.png'
 
 export function Home() {
@@ -19,9 +20,11 @@ export function Home() {
                 </p>
             </div>
             <div className='h-40 flex justify-center items-center '>
-                <button className='bg-gray-500 px-16 py-2 text-white font-medium rounded-sm'>
-                    Get Started
-                </button>
+                <Link href='/tasks'>
+                    <a className='bg-gray-700 px-16 py-2 text-white font-medium rounded-sm'>
+                        Get Started
+                    </a>
+                </Link>
             </div>
         </>
     )
