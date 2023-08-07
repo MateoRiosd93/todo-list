@@ -12,13 +12,12 @@ export function Home() {
                     <span className='text-4xl'>👋</span> Welcome the TODO app
                 </h4>
                 <p className='leading-snug text-center px-6 py-8 text-lg'>
-                    Imagina un mundo donde cada tarea se convierte en una
-                    <span className='font-bold'> oportunidad</span> para
-                    brillar. Desde la planificación de tus proyectos más
-                    ambiciosos hasta el seguimiento de tus éxitos diarios,
-                    nuestra Todo app hace que cada paso del camino sea
-                    <span className='font-bold'> emocionante</span> y
-                    <span className='font-bold'> satisfactorio.</span>
+                    Imagine a world where every task becomes an
+                    <span className='font-bold'> opportunity</span> to shine.
+                    From planning your most ambitious projects to tracking your
+                    daily successes, our Todo app makes every step of the way
+                    <span className='font-bold'> exciting</span> and
+                    <span className='font-bold'> satisfying.</span>
                 </p>
             </div>
             <div className='h-40 flex justify-center items-center '>
