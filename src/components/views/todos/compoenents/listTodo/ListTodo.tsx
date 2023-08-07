@@ -1,14 +1,22 @@
 import { useTodoState } from '../../../../../store/todoState'
+import EmptyImage from '../../../../../assets/illustrations/empty-todos.png'
 import Todo from '../todo/Todo'
 
-
 export default function ListTodo() {
-
     const { todos } = useTodoState()
 
-    if(!todos.length){
+    if (!todos.length) {
         return (
-            <p className='text-xl font-light text-center mt-50'>Crea tus primeros TODOs</p>
+            <div className='flex flex-col justify-center items-center gap-3 mt-6'>
+                <img
+                    className='w-64'
+                    src={EmptyImage}
+                    alt='Empty TODOs'
+                />
+                <p className='text-xl font-light text-center mt-50'>
+                    {`Add your things todo's`}
+                </p>
+            </div>
         )
     }
 
@@ -22,4 +30,3 @@ export default function ListTodo() {
         </div>
     )
 }
-``
