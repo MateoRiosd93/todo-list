@@ -4,7 +4,7 @@ interface Props {
     children: React.ReactElement
 }
 
-export default function Layout({ children }: Props) {
+export function Layout({ children }: Props) {
     return (
         <div className='flex flex-col items-center h-screen'>
             <svg xmlns='http://www.w3.org/2000/svg' className='w-full'>

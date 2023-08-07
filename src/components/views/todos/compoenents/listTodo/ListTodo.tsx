@@ -7,7 +7,7 @@ export default function ListTodo() {
 
     if (!todos.length) {
         return (
-            <div className='flex flex-col justify-center items-center gap-3 mt-6'>
+            <div className='flex flex-col justify-center items-center gap-4 mt-6'>
                 <img
                     className='w-64'
                     src={EmptyImage}
