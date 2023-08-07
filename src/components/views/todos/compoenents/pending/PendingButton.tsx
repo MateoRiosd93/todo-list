@@ -1,4 +1,4 @@
-export default function PendingButton() {
+export function PendingButton() {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'

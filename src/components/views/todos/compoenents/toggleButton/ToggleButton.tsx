@@ -1,13 +1,14 @@
-import React from 'react'
+import { DoneButton } from '../done/DoneButton'
+import { PendingButton } from '../pending/PendingButton'
 
 interface Props {
     completed: boolean
 }
 
-export default function ToggleButton({ completed }: Props) {
-  return (
-    <div>
-      {/* TODO: Realizar logica para el boton complet y pending */}
-    </div>
-  )
+export function ToggleButton({ completed }: Props) {
+    if (completed) {
+        return <DoneButton />
+    }
+
+    return <PendingButton />
 }

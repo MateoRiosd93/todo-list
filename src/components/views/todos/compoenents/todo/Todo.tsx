@@ -1,7 +1,6 @@
 import { useTodoState } from '../../../../../store/todoState'
 import DeleteButton from '../delete/DeleteButton'
-import DoneButton from '../done/DoneButton'
-import PendingButton from '../pending/PendingButton'
+import { ToggleButton } from '../toggleButton/ToggleButton'
 
 interface Props {
     id: string
@@ -11,11 +10,13 @@ interface Props {
 }
 
 export default function Todo({ id, name, creationDate, completed }: Props) {
-    const { removeTodo } = useTodoState()
+    const { removeTodo, toggleTodo } = useTodoState()
 
     return (
         <div className='w-full flex items-center justify-between my-2 px-6 py-4 shadow-md rounded-md hover:bg-slate-100 transition-colors'>
-            {completed ? <DoneButton /> : <PendingButton />}
+            <button onClick={() => toggleTodo(id)}>
+                <ToggleButton completed={completed} />
+            </button>
             <div className='w-3/4 flex flex-col items-start justify-center'>
                 <h3 className='font-normal'>{name}</h3>
                 <p className='font-thin'>{creationDate}</p>
