@@ -9,6 +9,7 @@ export interface Todo {
 
 interface TodoState {
     todos: Todo[]
+    filteredTodos: Todo[]
     addTodo: (todo: Todo) => void
     removeTodo: (id: string) => void
     toggleTodo: (id: string) => void
@@ -18,46 +19,31 @@ interface TodoState {
 }
 
 export const useTodoState = create<TodoState>((set) => ({
-    todos: [
-        {
-            id: "1234",
-            name: "Estudiar React",
-            creationDate: "2020/02/12",
-            completed: true
-        },
-        {
-            id: "3424",
-            name: "Estudiar ECMAScript",
-            creationDate: "2020/02/12",
-            completed: true
-        },
-        {
-            id: "1242",
-            name: "Estudiar Nodejs",
-            creationDate: "2020/02/12",
-            completed: false
-        },
-    ],
+    todos: [],
+    filteredTodos: [],
     addTodo: (todo: Todo) => set((state) => ({
-        todos: [...state.todos, todo]
+        todos: [...state.todos, todo],
+        filteredTodos: []
     })),
     removeTodo: (id: string) => set((state) => ({
-        todos: state.todos.filter(todo => todo.id !== id)
+        todos: state.todos.filter(todo => todo.id !== id),
+        filteredTodos: state.filteredTodos.filter(todo => todo.id !== id),
     })),
     toggleTodo: (id: string) => set(state => ({
-        todos: toggleTodos(state, id)
+        todos: toggleTodos(state.todos, id),
+        filteredTodos: toggleTodos(state.filteredTodos, id)
     })),
     completedTodos: () => set(state => ({
-        todos: state.todos.filter(todo => todo.completed)
+        filteredTodos: state.todos.filter(todo => todo.completed)
     })),
     pendingTodos: () => set(state => ({
-        todos: state.todos.filter(todo => !todo.completed)
+        filteredTodos: state.todos.filter(todo => !todo.completed)
     })),
-    allTodos: () => set(state => ({ todos: state.todos }))
+    allTodos: () => set(state => ({ todos: state.todos, filteredTodos: [] }))
 }))
 
-const toggleTodos = (state: TodoState, id: string) => {
-    return state.todos.map(todo => {
+const toggleTodos = (todos: Todo[], id: string) => {
+    return todos.map(todo => {
         if (todo.id === id) {
             return {
                 ...todo,
