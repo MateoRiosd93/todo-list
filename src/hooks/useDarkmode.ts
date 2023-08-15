@@ -7,7 +7,6 @@ enum DarkMode {
 }
 
 const getInitialState = () => {
-    console.log(localStorage.getItem(DarkMode.theme))
     if(localStorage.getItem(DarkMode.theme) === DarkMode.dark){
         document.documentElement.classList.add(DarkMode.dark)
         return true
