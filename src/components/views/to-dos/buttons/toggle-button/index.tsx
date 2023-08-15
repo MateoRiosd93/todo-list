@@ -1,5 +1,5 @@
-import { DoneButton } from '../done/DoneButton'
-import { PendingButton } from '../pending/PendingButton'
+import { DoneButton } from '../done-button'
+import { PendingButton } from '../pending-button'
 
 interface Props {
     completed: boolean

@@ -1,9 +1,9 @@
-import AddTodo from './compoenents/addTodo/AddTodo'
-import Footer from './compoenents/footer/Footer'
-import Header from './compoenents/header/Header'
-import ListTodo from './compoenents/listTodo/ListTodo'
+import AddTodo from './add-todo'
+import Footer from './footer'
+import Header from './header'
+import ListTodo from './list-to-do'
 
-export function Todos() {
+export function ToDos() {
     return (
         <div className='h-screen w-screen flex flex-col justify-between items-center'>
             <Header />

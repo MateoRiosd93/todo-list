@@ -1,6 +1,6 @@
-import { useTodoState } from '../../../../../store/todoState'
-import DeleteButton from '../delete/DeleteButton'
-import { ToggleButton } from '../toggleButton/ToggleButton'
+import DeleteButton from '../buttons/delete-button'
+import { ToggleButton } from '../buttons/toggle-button'
+import { useTodoState } from '../../../../store/todoState';
 
 interface Props {
     id: string

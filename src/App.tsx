@@ -1,16 +1,16 @@
 import { Route, Switch } from 'wouter'
 
-import { Home } from './components/views/home/Home'
-import { Layout } from './components/layout/Layout'
-import { Todos } from './components/views/todos/Todos'
-import { NotFound } from './components/views/notFound'
+import { Home } from './components/views/home'
+import { Layout } from './components/layout'
+import { ToDos } from './components/views/to-dos'
+import { NotFound } from './components/views/not-found'
 
 export function App() {
     return (
         <Layout>
             <Switch>
                 <Route path='/' component={Home} />
-                <Route path='/tasks' component={Todos} />
+                <Route path='/tasks' component={ToDos} />
                 <Route>
                     <NotFound />
                 </Route>

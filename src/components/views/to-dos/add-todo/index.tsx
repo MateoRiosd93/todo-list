@@ -1,5 +1,5 @@
-import AddButton from '../add/addButton'
-import { useAddTodo } from '../../../../../hooks/useAddTodo'
+import AddButton from '../buttons/add-button'
+import { useAddTodo } from '../../../../hooks/useAddTodo';
 
 export default function AddTodo() {
     const { task, handleChange, saveTodo } = useAddTodo()

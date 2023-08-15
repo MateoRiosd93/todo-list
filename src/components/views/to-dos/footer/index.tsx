@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useTodoState } from '../../../../../store/todoState'
+import { useTodoState } from '../../../../store/todoState';
 
 interface State {
     all: boolean

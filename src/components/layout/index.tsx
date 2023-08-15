@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Theme } from '../darkmode'
+import { Theme } from '../dark-mode'
 interface Props {
     children: React.ReactElement
 }

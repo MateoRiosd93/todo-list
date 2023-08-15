@@ -1,5 +1,5 @@
-import { DarkButton } from './components/darkButton'
-import { LightButton } from './components/lightButton'
+import { DarkButton } from './darkButton'
+import { LightButton } from './lightButton'
 
 interface Props {
     mode: boolean

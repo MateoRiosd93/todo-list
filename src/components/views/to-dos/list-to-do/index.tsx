@@ -1,6 +1,6 @@
-import { useTodoState } from '../../../../../store/todoState'
-import EmptyImage from '../../../../../assets/illustrations/empty-todos.png'
-import Todo from '../todo/Todo'
+import EmptyImage from '../../../../assets/illustrations/empty-todos.png'
+import Todo from '../to-do'
+import { useTodoState } from '../../../../store/todoState';
 
 export default function ListTodo() {
     const { todos, filteredTodos } = useTodoState()
