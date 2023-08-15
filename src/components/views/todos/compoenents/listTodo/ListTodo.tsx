@@ -9,10 +9,10 @@ export default function ListTodo() {
         return (
             <div className='flex flex-col justify-center items-center gap-4 mt-6'>
                 <img className='w-64' src={EmptyImage} alt='Empty TODOs' />
-                <p className='text-xl font-light text-center mt-50'>
+                <p className='text-xl font-light text-center mt-50 dark:text-slate-100'>
                     {`Add your things todo's`}
                 </p>
-            </div>
+            </div>  
         )
     }
 

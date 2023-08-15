@@ -6,7 +6,6 @@ interface Props {
 }
 
 export function Theme({ mode }: Props) {
-    console.log(mode)
     if (mode) {
         return <LightButton />
     }

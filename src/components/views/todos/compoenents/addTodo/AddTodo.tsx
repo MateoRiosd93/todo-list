@@ -10,7 +10,7 @@ export default function AddTodo() {
             onSubmit={saveTodo}
         >
             <input
-                className='w-screen border border-gray-400 px-4 py-3 rounded-md focus:border-gray-600  outline-none text-lg'
+                className='w-screen border text-slate-900 border-gray-400 px-4 py-3 rounded-md focus:border-gray-600  outline-none text-lg'
                 type='text'
                 placeholder={`Write your todo's...`}
                 value={task}
