@@ -1,11 +1,20 @@
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Todo list</h1>
-      </header>
-    </div>
-  );
-}
+import { Route, Switch } from 'wouter'
 
-export { App };
+import { Home } from './components/views/home'
+import { Layout } from './components/layout'
+import { ToDos } from './components/views/to-dos'
+import { NotFound } from './components/views/not-found'
+
+export function App() {
+    return (
+        <Layout>
+            <Switch>
+                <Route path='/' component={Home} />
+                <Route path='/tasks' component={ToDos} />
+                <Route>
+                    <NotFound />
+                </Route>
+            </Switch>
+        </Layout>
+    )
+}

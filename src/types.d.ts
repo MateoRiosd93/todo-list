@@ -1,0 +1,1 @@
+type keyDays = "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat" | "Sun"
