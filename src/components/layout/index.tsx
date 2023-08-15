@@ -1,21 +1,11 @@
-import { useState } from 'react'
+import { useDarkMode } from '../../hooks/useDarkmode'
 import { Theme } from '../dark-mode'
 interface Props {
     children: React.ReactElement
 }
 
 export function Layout({ children }: Props) {
-    const [darkMode, setDarkMode] = useState(false)
-
-    const handleMode = () => {
-        setDarkMode(!darkMode)
-        if(darkMode){
-            document.documentElement.classList.remove('dark')
-            return
-        }
-
-        document.documentElement.classList.add('dark')
-    }
+    const {darkMode, handleMode} = useDarkMode()
 
     return (
         <div className='flex flex-col items-center h-screen relative dark:bg-slate-800'>
