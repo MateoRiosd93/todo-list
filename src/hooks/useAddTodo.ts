@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Todo, useTodoState } from "../store/todoState"
 
-export const useAddTodo = () => {
+export function useAddTodo() {
     const [task, setTask] = useState('')
     const { addTodo } = useTodoState()
 

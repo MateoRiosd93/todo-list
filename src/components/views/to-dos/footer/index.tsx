@@ -32,7 +32,7 @@ enum Filters {
 }
 
 export default function Footer() {
-    const { completedTodos, pendingTodos, allTodos } = useTodoState()
+    const { completedTodo, pendingTodo, allTodos } = useTodoState()
 
     const [isActive, setIsActive] = useState<State>(INITIAL_STATE)
 
@@ -41,13 +41,13 @@ export default function Footer() {
     const handleFilter = (value: string) => {
         if (value === Filters.completed) {
             setIsActive(COMPLETED_STATE)
-            completedTodos()
+            completedTodo()
             return
         }
 
         if (value === Filters.pending) {
             setIsActive(PENDING_STATE)
-            pendingTodos()
+            pendingTodo()
             return
         }
 
