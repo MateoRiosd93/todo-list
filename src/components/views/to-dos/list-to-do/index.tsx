@@ -1,9 +1,23 @@
+import { useState, useEffect } from 'react'
 import EmptyImage from '../../../../assets/illustrations/empty-todos.png'
 import Todo from '../to-do'
-import { useTodoState } from '../../../../store/todoState';
+import { useTodoState } from '../../../../store/todoState'
+import { LoadingTodo } from '../skeleton-to-do'
 
 export default function ListTodo() {
+    const [loading, setLoading] = useState(false)
     const { todos, filteredTodos } = useTodoState()
+
+    useEffect(() => {
+        if (localStorage.getItem('TODOS')) {
+            setLoading(true)
+        }
+
+        const timer = setTimeout(() => {
+            setLoading(false)
+        }, 1000)
+        return () => clearTimeout(timer)
+    }, [])
 
     if (!todos.length) {
         return (
@@ -12,7 +26,7 @@ export default function ListTodo() {
                 <p className='text-xl font-light text-center mt-50 dark:text-slate-100'>
                     {`Add your things todo's`}
                 </p>
-            </div>  
+            </div>
         )
     }
 
@@ -21,9 +35,13 @@ export default function ListTodo() {
     return (
         <div className='flex justify-center items-center mt-2'>
             <ul className='w-full px-4 py-2 h-[380px] overflow-y-scroll'>
-                {renderingTodos.map((todo, index) => (
-                    <Todo key={`${todo}${index}`} {...todo} />
-                ))}
+                {renderingTodos.map((todo, index) =>
+                    loading ? (
+                        <LoadingTodo key={`${todo}${index}`} />
+                    ) : (
+                        <Todo key={`${todo}${index}`} {...todo} />
+                    )
+                )}
             </ul>
         </div>
     )

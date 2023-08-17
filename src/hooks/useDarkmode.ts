@@ -7,7 +7,8 @@ enum DarkMode {
 }
 
 const getInitialState = () => {
-    const VALIDATION_THEME = (localStorage.getItem(DarkMode.theme) === DarkMode.dark) || window.matchMedia('(prefers-color-scheme: dark)').matches
+    const VALIDATION_THEME = (localStorage.getItem(DarkMode.theme) === DarkMode.dark) ||
+        (!(DarkMode.theme in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 
     if (VALIDATION_THEME) {
         document.documentElement.classList.add(DarkMode.dark)
