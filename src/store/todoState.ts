@@ -66,6 +66,7 @@ const toggleTodos = (state: TodoState, id: string) => {
     }
 }
 
+
 const setTodosLocalStorage = (todos: Todo[]) => localStorage.setItem('TODOS', JSON.stringify(todos))
 
 const toggle = (todos: Todo[], id: string) => {
