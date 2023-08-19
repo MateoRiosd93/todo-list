@@ -61,7 +61,7 @@ export default function Footer() {
             <div>
                 <span
                     onClick={() => handleFilter(Filters.all)}
-                    className={`px-2 py-1 mx-1 font-extralight text-xl ${
+                    className={`px-2 py-1 mx-1 font-extralight cursor-pointer text-xl ${
                         all ? 'underline' : ''
                     } dark:text-slate-100`}
                 >
@@ -69,7 +69,7 @@ export default function Footer() {
                 </span>
                 <span
                     onClick={() => handleFilter(Filters.completed)}
-                    className={`px-2 py-1 mx-1 font-extralight text-xl ${
+                    className={`px-2 py-1 mx-1 font-extralight cursor-pointer text-xl ${
                         completed ? 'underline' : ''
                     } dark:text-slate-100`}
                 >
@@ -77,7 +77,7 @@ export default function Footer() {
                 </span>
                 <span
                     onClick={() => handleFilter(Filters.pending)}
-                    className={`px-2 py-1 mx-1 font-extralight text-xl ${
+                    className={`px-2 py-1 mx-1 font-extralight cursor-pointer text-xl ${
                         pending ? 'underline' : ''
                     } dark:text-slate-100`}
                 >
