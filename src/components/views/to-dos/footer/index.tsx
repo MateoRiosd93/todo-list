@@ -57,7 +57,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className='w-screen flex justify-end pb-1'>
+        <footer className='w-full flex justify-end pb-2'>
             <div>
                 <span
                     onClick={() => handleFilter(Filters.all)}
