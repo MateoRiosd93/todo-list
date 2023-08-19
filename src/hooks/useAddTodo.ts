@@ -15,7 +15,7 @@ export function useAddTodo() {
             const newTodo: Todo = {
                 id: Date.now().toString(),
                 name: task,
-                creationDate: new Date().toLocaleString(),
+                creationDate: new Date().toDateString(),
                 completed: false,
             }
             addTodo(newTodo)
