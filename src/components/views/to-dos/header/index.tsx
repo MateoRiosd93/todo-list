@@ -4,7 +4,7 @@ export default function Header() {
     const { dates } = useDates()
 
     return (
-        <header className='w-screen flex justify-around items-center'>
+        <header className='w-screen flex justify-around items-center md:mt-12'>
             <div className='flex justify-items-stretch'>
                 <h3 className='font-extrabold text-7xl text-center text-gray-800 dark:text-slate-100'>
                     {dates.day}

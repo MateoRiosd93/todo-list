@@ -7,7 +7,7 @@ export function ToDos() {
     return (
         <div className='h-screen w-screen flex flex-col justify-between items-center'>
             <Header />
-            <div className='flex flex-col h-2/3 gap-6'>
+            <div className='flex flex-col h-2/3 gap-6 md:w-3/4 md:mt-14'>
                 <AddTodo/>
                 <ListTodo/>
             </div>

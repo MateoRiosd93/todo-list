@@ -10,7 +10,7 @@ export function App() {
         <Layout>
             <Switch>
                 <Route path='/' component={Home} />
-                <Route path='/tasks' component={ToDos} />
+                <Route path='/to-dos' component={ToDos} />
                 <Route>
                     <NotFound />
                 </Route>

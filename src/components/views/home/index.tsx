@@ -20,9 +20,9 @@ export function Home() {
                     <span className='font-bold'> satisfying.</span>
                 </p>
             </div>
-            <div className='h-40 flex justify-center items-center '>
-                <Link href='/tasks'>
-                    <a className='bg-gray-700 px-16 py-2 text-white font-medium rounded-sm dark:bg-slate-100 dark:text-slate-800'>
+            <div className='h-40 flex justify-center items-center'>
+                <Link href='/to-dos'>
+                    <a className='bg-gray-700 px-16 py-2 text-white font-medium rounded-sm dark:bg-slate-100 dark:text-slate-800 md:mb-4'>
                         Get Started
                     </a>
                 </Link>
