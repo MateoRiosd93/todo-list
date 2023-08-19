@@ -19,11 +19,11 @@ export default function Todo({ id, name, creationDate, completed }: Props) {
             </button>
             <div className='w-3/4 flex flex-col items-start justify-center'>
                 <h3
-                    className={`font-normal ${completed ? 'line-through' : ''}`}
+                    className={`font-norma text-xl ${completed ? 'line-through' : ''}`}
                 >
                     {name}
                 </h3>
-                <p className='font-thin'>{creationDate}</p>
+                <p className='font-thin text-sm'>{creationDate}</p>
             </div>
             <button onClick={() => removeTodo(id)}>
                 <DeleteButton />
