@@ -33,8 +33,8 @@ export default function ListTodo() {
     const renderingTodos = filteredTodos.length ? filteredTodos : todos
 
     return (
-        <div className='flex justify-center items-center mt-2'>
-            <ul className='w-full px-4 py-2 h-[380px] overflow-y-scroll'>
+        <div className='w-full flex justify-center items-center mt-2'>
+            <ul className='w-full flex flex-col items-center px-4 h-[380px] overflow-y-scroll'>
                 {renderingTodos.map((todo, index) =>
                     loading ? (
                         <LoadingTodo key={`${todo}${index}`} />

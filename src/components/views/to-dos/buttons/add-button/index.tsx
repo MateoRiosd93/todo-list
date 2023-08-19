@@ -2,7 +2,7 @@ export default function AddButton() {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='icon icon-tabler icon-tabler-plus text-gray-400 absolute top-2 right-6'
+            className='icon icon-tabler icon-tabler-plus text-gray-400 absolute top-[11px] right-6'
             width='32'
             height='32'
             viewBox='0 0 24 24'

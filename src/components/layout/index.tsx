@@ -8,14 +8,14 @@ export function Layout({ children }: Props) {
     const {darkMode, handleMode} = useDarkMode()
 
     return (
-        <div className='flex flex-col items-center h-screen relative dark:bg-slate-800'>
+        <div className='flex flex-col items-center h-screen relative dark:bg-slate-800 overflow-y-hidden'>
             <button
-                className='flex justify-center items-center rounded-full bg-blue-100 absolute transition-all z-10 w-8 right-5 top-5 p-[2px] dark:bg-yellow-100'
-                onClick={() => handleMode()}
+                className='flex justify-center items-center rounded-full bg-blue-100 absolute transition-all z-10 w-8 right-5 top-5 p-[2px] dark:bg-yellow-100 md:right-32 lg:right-[400px]'
+                onClick={() => handleMode()}        
             >
                 <Theme mode={darkMode} />
             </button>
-            <svg xmlns='http://www.w3.org/2000/svg' className='w-full'>
+            <svg xmlns='http://www.w3.org/2000/svg' className='w-full md:hidden'>
                 <path
                     fill={`${darkMode ? "#F1F5F9" :'#374151'}`}
                     fillOpacity='1'
