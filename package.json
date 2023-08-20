@@ -19,8 +19,8 @@
     "zustand": "^4.3.9"
   },
   "scripts": {
-    "start": "npm start",
-    "build": "npm build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
