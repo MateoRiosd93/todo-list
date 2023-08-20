@@ -15,7 +15,7 @@ export function Layout({ children }: Props) {
             >
                 <Theme mode={darkMode} />
             </button>
-            <svg xmlns='http://www.w3.org/2000/svg' className='w-full md:hidden'>
+            <svg xmlns='http://www.w3.org/2000/svg' className='w-full h-[90px] md:hidden'>
                 <path
                     fill={`${darkMode ? "#F1F5F9" :'#374151'}`}
                     fillOpacity='1'

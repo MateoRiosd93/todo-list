@@ -5,13 +5,13 @@ export function Home() {
     return (
         <>
             <div>
-                <img src={HomeImage} alt='Home image' />
+                <img className='w-[260px]' src={HomeImage} alt='Home image' />
             </div>
             <div>
-                <h4 className='font-extrabold text-center text-2xl dark:text-slate-100'>
+                <h4 className='font-extrabold text-center text-xl dark:text-slate-100'>
                     <span className='text-4xl'>👋</span> Welcome the TODO app
                 </h4>
-                <p className='leading-7- text-center px-6 py-8 text-lg dark:text-slate-100'>
+                <p className='leading-7- text-center px-5 py-6 mb-4 text-sm dark:text-slate-100'>
                     Imagine a world where every task becomes an
                     <span className='font-bold'> opportunity</span> to shine.
                     From planning your most ambitious projects to tracking your
@@ -20,9 +20,9 @@ export function Home() {
                     <span className='font-bold'> satisfying.</span>
                 </p>
             </div>
-            <div className='h-40 flex justify-center items-center'>
+            <div className='flex justify-center items-center'>
                 <Link href='/to-dos'>
-                    <a className='bg-gray-700 px-16 py-2 text-white font-medium rounded-sm dark:bg-slate-100 dark:text-slate-800 md:mb-4'>
+                    <a className='bg-gray-700 px-12 py-2 text-white font-semibold rounded-sm dark:bg-slate-100 dark:text-slate-800 md:mb-4'>
                         Get Started
                     </a>
                 </Link>
