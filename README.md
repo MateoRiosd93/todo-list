@@ -22,5 +22,8 @@ Runs the server that _json-server_ provides\
 For example:\
 Use **GET** http://localhost:3001/todos to get the todo's list.
 
+## Excalidraw
+
+https://excalidraw.com/#room=bd49d822784624773f4e,_wSMXXV3qDnpQYsnGvE5SA
 
 by Aleteo
